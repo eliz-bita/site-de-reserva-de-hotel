@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --color-light: #ffffff;
+    --color-blue: #6959c5;
+    --transition: .5s;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light);
+    font-weight: 900;
+    transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn {
+    background-color: var(--color-blue);
+    border: 2px solid var(--color-blue);
+    padding: 8px 3.5rem;
+    border-radius: 5px;
+    color: var(--color-light);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--color-blue);
+}
+
+
+/* header */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.164);
+    color: white;
+    padding: 5px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.header nav ul li {
+    margin: 0;
+    color: white;
+}
+
+
+/* banner */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4, 9, 30, .3), rgba(4, 9, 30, .9)),
+        url(../images/emcasa.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    width: 60%;
+    padding: 5rem;
+    color: var(--color-light);
+}
+
+
+.hero-content h2 {
+    font-size: 7vmin;
+}
+
+.hero-content p {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 3.6rem;
+}
+
+/* hotéis */
+.hotel-title {
+    font-size: 5vmin;
+    text-align: center;
+    margin: 4rem 0 2rem;
+    color: var(--color-blue);
+}
+
+.hotel-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.hotel-item {
+    width: 28%;
+    margin: 3rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-shadow: 1px 1px 30px #ccc;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.hotel-item:hover {
+    transform: scale(1.1);
+}
+
+.hotel-item img {
+    width: 90%;
+    border-radius: 5px;
+}
+
+.hotel-item h3 {
+    margin: 2rem 0;
+    font-weight: 800;
+}
+
+.hotel-item p {
+    margin: 0 0 3rem;
+    width: 80%;
+}
+
+
+
+/* informacoes */
+.informacoes {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(70, 60, 131) 35%, rgb(28, 73, 82) 100%);
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 50px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.informacoes h3 {
+    font-size: 3rem;
+    margin-bottom: 35px;
+}
+
+.informacoes p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.informacoes hr {
+    width: 200px;
+    height: 2px;
+    background: var(--color-light);
+    margin-bottom: 70px;
+    border: none;
+}
+
+.informacoes .item {
+    width: 100%;
+    display: flex;
+}
+
+.informacoes .item li {
+    padding: 0 30px;
+    text-align: center;
+}
+
+.informacoes .item li i {
+    color: var(--color-light);
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.informacoes .item li h4 {
+    color: var(--color-light);
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.informacoes .item li p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* cadastro */
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 110px 70px;
+}
+
+.cadastro h3 {
+    font-size: 3rem;
+    margin-bottom: 35px;
+}
+
+.cadastro p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.cadastro form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 800px;
+}
+
+.cadastro form input {
+    padding: 15px;
+    border: 1px solid var(--color-blue);
+    border-radius: 4px;
+    margin-right: 15px;
+    width: 300px;
+}
+
+.cadastro form button {
+    padding: 15px;
+    background: var(--color-blue);
+    color: var(--color-light);
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* rodapé */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(70, 60, 131) 35%, rgb(28, 73, 82) 100%);
+    padding: 10px 0;
+}
+
+footer ul {
+    display: flex;
+    margin-bottom: 3px;
+}
+
+footer ul li {
+    margin-right: 10px;
+}
+
+footer ul li:last-child {
+    margin-right: 0;
+}
+
+footer ul li a {
+    color: var(--color-light);
+    font-size: 2em;
+}
+
+footer p {
+    color: var(--color-light);
+    text-align: center;
+}
+
+
+/* responsividade */
+@media (max-width: 1200px) {
+    .hotel-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .hero-content {
+        width: 90%;
+    }
+
+    .hotel-item {
+        width: 60%;
+    }
+
+    .informacoes .item {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 3px 25px;
+        flex-direction: column;
+    }
+
+    .header h1 {
+        margin-bottom: 3px;
+        font-size: 20px;
+    }
+
+    .header nav ul {
+        gap: 30px;
+        font-size: 83%;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero-content p {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+
+    .hotel-item {
+        width: 90%;
+    }
+
+    .informacoes {
+        padding: 45px 45px;
+        margin-top: 25px;
+    }
+
+    .informacoes h3 {
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+    }
+
+    .informacoes p {
+        margin-bottom: 35px;
+        font-size: 1.7rem;
+    }
+
+    .informacoes .item li {
+        padding: 0 10px;
+    }
+
+    .informacoes .item li i {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .informacoes .item li h4 {
+        font-size: 1.8rem;
+    }
+
+    .informacoes .item li p {
+        font-size: 1.5rem;
+    }
+
+    .cadastro {
+        width: 100%;
+        padding: 80px 55px;
+    }
+
+    .cadastro h3 {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .cadastro form {
+        flex-direction: column;
+    }
+
+    .cadastro form input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    footer ul {
+        margin-bottom: 2px;
+    }
+
+    footer ul li {
+        margin-right: 13px;
+    }
+
+
+    footer ul li a {
+        font-size: 1.3em;
+    }
+
+}
